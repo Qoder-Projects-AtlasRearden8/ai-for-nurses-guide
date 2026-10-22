@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#073e3a">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Patient Education Drafts: Clarity Without Guessing | AI for Nurses and Healthcare Workers</title>
+  <meta name="description" content="A clinician-review workflow for plain-language education, teach-back, accessibility, translation, and preventing invented clinical instructions.">
+  <meta property="og:title" content="Patient Education Drafts: Clarity Without Guessing | AI for Nurses and Healthcare Workers">
+  <meta property="og:description" content="A clinician-review workflow for plain-language education, teach-back, accessibility, translation, and preventing invented clinical instructions.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="page-chapter">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="AI for Nurses and Healthcare Workers home">
+      <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5l3.15 9.35L28.5 16l-9.35 3.15L16 28.5l-3.15-9.35L3.5 16l9.35-3.15L16 3.5Z" fill="currentColor"/><circle cx="26" cy="6" r="2.4" fill="#e5b36d"/></svg></span>
+      <span>
+        <span class="brand-title">AI for Nurses</span>
+        <span class="brand-kicker">Healthcare field guide</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="../index.html"><span>Guide</span></a><a class="nav-link" href="../chapters/prompt-library.html"><span>Prompt library</span></a><a class="nav-link" href="../chapters/what-not-to-use-ai-for.html"><span>What not to use</span></a><a class="nav-link" href="../chapters/checklists-and-glossary.html"><span>Checklists</span></a><a class="nav-link" href="../search.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.7" cy="8.7" r="5.2" stroke="currentColor" stroke-width="1.7"/><path d="M12.7 12.7l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span></a>
+    </nav>
+  </div>
+</header>
+<div class="notice-bar" role="note">
+  <div class="wrap notice-inner">
+    <span class="notice-dot" aria-hidden="true"></span>
+    <p><strong>Educational use only.</strong> Not medical, legal, or compliance advice. AI output requires human review.</p>
+  </div>
+</div>
+  <main id="main" class="page-shell">
+  <div class="chapter-layout">
+    <article class="chapter" aria-labelledby="chapter-title">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Guide</a></li>
+          <li><a href="../index.html#contents">Chapters</a></li>
+          <li aria-current="page">Chapter 06</li>
+        </ol>
+      </nav>
+
+      <header class="chapter-header">
+        <div class="chapter-kicker">
+          <span class="chapter-badge">Chapter 06</span>
+          <span class="chapter-part">Part 2 · Everyday practice</span>
+        </div>
+        <h1 class="chapter-title" id="chapter-title">Patient Education Drafts: Clarity Without Guessing</h1>
+        <p class="chapter-summary">A clinician-review workflow for plain-language education, teach-back, accessibility, translation, and preventing invented clinical instructions.</p>
+        <div class="chapter-meta">
+          <span>11 min read</span>
+          <span>Chapter 06 of 13</span>
+        </div>
+      </header>
+
+      <details class="toc-mobile">
+        <summary>On this page</summary>
+        <ol class="toc-list"><li class="toc-level-2"><a href="#the-safest-role-for-ai-in-patient-education">The safest role for AI in patient education</a></li><li class="toc-level-2"><a href="#start-with-approved-content-not-a-blank-page">Start with approved content, not a blank page</a></li><li class="toc-level-2"><a href="#a-patient-education-workflow">A patient-education workflow</a></li><li class="toc-level-3"><a href="#step-1-define-the-audience-and-purpose">Step 1: Define the audience and purpose</a></li><li class="toc-level-3"><a href="#step-2-gather-the-clinician-approved-facts">Step 2: Gather the clinician-approved facts</a></li><li class="toc-level-3"><a href="#step-3-ask-for-a-constrained-draft">Step 3: Ask for a constrained draft</a></li><li class="toc-level-3"><a href="#step-4-complete-the-clinical-review">Step 4: Complete the clinical review</a></li><li class="toc-level-3"><a href="#step-5-review-for-health-literacy-and-accessibility">Step 5: Review for health literacy and accessibility</a></li><li class="toc-level-3"><a href="#step-6-use-translation-and-interpretation-correctly">Step 6: Use translation and interpretation correctly</a></li><li class="toc-level-3"><a href="#step-7-test-version-and-distribute">Step 7: Test, version, and distribute</a></li><li class="toc-level-2"><a href="#teach-back-questions-that-do-not-assume-understanding">Teach-back questions that do not assume understanding</a></li><li class="toc-level-2"><a href="#images-diagrams-and-generated-visuals">Images, diagrams, and generated visuals</a></li><li class="toc-level-2"><a href="#patient-facing-chatbots-and-automated-replies">Patient-facing chatbots and automated replies</a></li><li class="toc-level-2"><a href="#a-brief-rewrite-example">A brief rewrite example</a></li><li class="toc-level-2"><a href="#patient-education-review-checklist">Patient education review checklist</a></li></ol>
+      </details>
+
+      <div class="inline-disclaimer" role="note">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.8 18 17H2L10 2.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 7.2v4.5M10 14.6v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <p><strong>Educational use only.</strong> This chapter is not medical, legal, or compliance advice. Verify clinical facts, follow local policy, and keep a qualified human accountable for any patient-facing output.</p>
+      </div>
+
+      <div class="article-body">
+        <p>Patient education is a caring act, not merely a translation of clinical language into simpler words. Good education helps a person understand what is happening, what they need to do, what to expect, when to seek help, and where to ask questions. Bad education can frighten, confuse, overwhelm, or dangerously mislead. AI can help with the wording and structure, but it cannot know the patient&#39;s clinical situation, values, language, or capacity unless a qualified professional has assessed those things.</p>
+<p>This chapter focuses on <strong>generic education drafts</strong> and on the editing of content whose facts have already been approved by a qualified clinician. It does not support using AI to generate patient-specific advice, invent warning signs, or replace patient teaching.</p>
+<blockquote class="callout-safety"><p><strong>Not medical advice:</strong> Examples and templates in this guide are educational. Do not give AI-generated material to a patient until a qualified clinician has verified the clinical facts and the document has gone through your organization&#39;s required review.</p></blockquote>
+<h2 id="the-safest-role-for-ai-in-patient-education">The safest role for AI in patient education<a class="heading-anchor" href="#the-safest-role-for-ai-in-patient-education" aria-label="Permalink to The safest role for AI in patient education">#</a></h2>
+<p>AI is best used as a <strong>language and structure assistant</strong>:</p>
+<ul><li>rewriting clinician-approved points in plain language;</li><li>suggesting headings and a logical sequence;</li><li>reducing sentence length and jargon;</li><li>creating a draft glossary of common terms;</li><li>generating teach-back questions;</li><li>checking whether a draft seems too dense or visually cluttered;</li><li>producing alternative phrasing at a requested reading level;</li><li>formatting a checklist or large-print version for review.</li></ul>
+<p>It is not a source of clinical facts. It should not decide:</p>
+<ul><li>which symptoms are emergencies;</li><li>when a follow-up visit should occur;</li><li>what dose, route, or frequency a medication should have;</li><li>which foods, activities, or treatments are safe;</li><li>what the patient&#39;s diagnosis or prognosis is;</li><li>whether a symptom is expected or concerning;</li><li>what is covered by insurance or guaranteed by a care plan.</li></ul>
+<p>These facts must come from a qualified clinician, current organizational protocol, the prescription or order, or an approved evidence source. The AI output must then be compared with that source.</p>
+<h2 id="start-with-approved-content-not-a-blank-page">Start with approved content, not a blank page<a class="heading-anchor" href="#start-with-approved-content-not-a-blank-page" aria-label="Permalink to Start with approved content, not a blank page">#</a></h2>
+<p>A blank prompt invites invention. A better workflow starts with a set of <strong>verified key points</strong> supplied by the clinical owner of the education content. For a generic handout, those points might include:</p>
+<ul><li>who the material is for;</li><li>the purpose of the education;</li><li>the actions the person should take;</li><li>what to expect, with relevant uncertainty;</li><li>signs or symptoms that require contact, using approved wording;</li><li>who to contact and how, if that information is stable;</li><li>follow-up or review expectations;</li><li>questions to ask the care team;</li><li>special considerations for accessibility or culture.</li></ul>
+<p>For patient-specific instructions, the key points must come from the current record and the treating clinician&#39;s plan. AI may help reword them, but it must not add, remove, or alter any clinical detail. If the order says &quot;follow up in 48 hours,&quot; the handout must say 48 hours, not &quot;within a few days.&quot; If the clinician has not specified a restriction, the draft must not invent one.</p>
+<h2 id="a-patient-education-workflow">A patient-education workflow<a class="heading-anchor" href="#a-patient-education-workflow" aria-label="Permalink to A patient-education workflow">#</a></h2>
+<h3 id="step-1-define-the-audience-and-purpose">Step 1: Define the audience and purpose<a class="heading-anchor" href="#step-1-define-the-audience-and-purpose" aria-label="Permalink to Step 1: Define the audience and purpose">#</a></h3>
+<p>Is this for a newly diagnosed adult, a caregiver, a family with limited health literacy, an adolescent, or a community audience? Is the goal knowledge, skill practice, decision support, or preparation for a conversation? What will the person do differently after reading it?</p>
+<p>Use ranges and general descriptions rather than real identifiers. &quot;A general handout for adults receiving care at an outpatient clinic&quot; is appropriate. &quot;A handout for the 34-year-old patient in room 6 with the rare complication&quot; is not.</p>
+<h3 id="step-2-gather-the-clinician-approved-facts">Step 2: Gather the clinician-approved facts<a class="heading-anchor" href="#step-2-gather-the-clinician-approved-facts" aria-label="Permalink to Step 2: Gather the clinician-approved facts">#</a></h3>
+<p>Create a source sheet with the facts and their owners. For a generic handout, cite the approved guideline or program material. For a patient-specific handout, use the current order, plan, and assessment. Mark anything that is unknown rather than asking the AI to fill it in.</p>
+<p>Keep sensitive details out of the prompt unless the approved workflow specifically permits them. Often, you can draft with placeholders such as <code>[follow-up interval from order]</code> and fill them in only in the approved final document.</p>
+<h3 id="step-3-ask-for-a-constrained-draft">Step 3: Ask for a constrained draft<a class="heading-anchor" href="#step-3-ask-for-a-constrained-draft" aria-label="Permalink to Step 3: Ask for a constrained draft">#</a></h3>
+<p>The prompt should state that the model must not invent facts, should preserve all clinical instructions, and should flag gaps.</p>
+<figure class="code-block"><figcaption><span>Prompt template</span><button class="copy-button" type="button" data-copy aria-label="Copy prompt template">Copy</button></figcaption><pre tabindex="0"><code>Create a plain-language patient education draft for [GENERAL AUDIENCE AND SETTING]. Use only the verified key points below. Do not add symptoms, medications, doses, restrictions, follow-up intervals, or guarantees that are not in the key points. If something is missing or ambiguous, insert a clearly marked placeholder and list it for me to verify.
+
+Aim for short sentences, common words, and a calm, respectful tone. Organize the content with headings that help the reader take action. Keep the reading demand appropriate for a general adult audience. Do not use scare tactics, blame, or phrases that imply the patient should already know this information.
+
+After the draft, provide:
+1. a list of every clinical claim and the key point it came from;
+2. any words or concepts that may need explanation;
+3. five teach-back questions a clinician could use;
+4. a list of gaps for human review.
+
+Verified key points:
+[KEY POINTS APPROVED BY A QUALIFIED CLINICIAN OR APPROVED PROGRAM SOURCE]
+
+Constraints:
+[READING LEVEL, LENGTH, FORMAT, LANGUAGE, ACCESSIBILITY NEEDS]</code></pre></figure>
+<p>This output is still a draft. The model&#39;s claim-by-key-point list can help the clinical reviewer check for unsupported additions, but it is not proof that the mapping is correct.</p>
+<h3 id="step-4-complete-the-clinical-review">Step 4: Complete the clinical review<a class="heading-anchor" href="#step-4-complete-the-clinical-review" aria-label="Permalink to Step 4: Complete the clinical review">#</a></h3>
+<p>A qualified clinician must verify:</p>
+<ul><li>the accuracy and completeness of every fact;</li><li>medication names, doses, routes, frequencies, and administration instructions;</li><li>warning signs and when to seek urgent care;</li><li>follow-up appointments, tests, and responsible contacts;</li><li>restrictions or activity guidance;</li><li>who the material is appropriate for;</li><li>any uncertainty that must be communicated;</li><li>consistency with the current orders and organization policy.</li></ul>
+<p>Use a <strong>line-by-line comparison</strong> with the approved source. Pay special attention to negatives and conditions: a missing &quot;do not&quot; can invert the meaning of an instruction. Look for hallucinated details that sound plausible because they fit the topic.</p>
+<h3 id="step-5-review-for-health-literacy-and-accessibility">Step 5: Review for health literacy and accessibility<a class="heading-anchor" href="#step-5-review-for-health-literacy-and-accessibility" aria-label="Permalink to Step 5: Review for health literacy and accessibility">#</a></h3>
+<p>Plain language is not childish language. It respects the reader&#39;s intelligence while reducing unnecessary cognitive load. Common practices include:</p>
+<ul><li>one main idea per paragraph;</li><li>short sentences and familiar words;</li><li>active voice where possible;</li><li>clear, action-oriented headings;</li><li>specific instructions rather than vague encouragement;</li><li>a logical sequence: what this is, what to do, what to expect, when to get help, who to contact;</li><li>definitions for necessary medical terms;</li><li>numbers written clearly, with context;</li><li>sufficient white space and readable font size;</li><li>no reliance on color alone;</li><li>images or diagrams only when verified and helpful;</li><li>formats that support screen readers, large print, or verbal teach-back.</li></ul>
+<p>Health literacy programs often aim for a fifth-to-eighth-grade reading level for general public material, but the right target depends on the audience. Readability formulas are rough screening tools, not proof of understanding. They may score a document as &quot;easy&quot; while the logic is still confusing. Test with real readers when possible, and always provide a way to ask questions.</p>
+<p>Avoid:</p>
+<ul><li>acronyms without explanation;</li><li>&quot;medicalese&quot; such as &quot;ensure adequate hydration&quot; when &quot;drink enough fluids&quot; is clearer;</li><li>vague terms like &quot;as needed&quot; unless the approved instruction defines what that means;</li><li>false reassurance or promises;</li><li>instructions that conflict with another part of the document;</li><li>dense walls of text;</li><li>culturally specific assumptions about family, food, faith, gender, or access to care.</li></ul>
+<h3 id="step-6-use-translation-and-interpretation-correctly">Step 6: Use translation and interpretation correctly<a class="heading-anchor" href="#step-6-use-translation-and-interpretation-correctly" aria-label="Permalink to Step 6: Use translation and interpretation correctly">#</a></h3>
+<p>Machine translation is not a qualified medical interpreter. Important clinical information, informed consent, safety instructions, and conversations about uncertainty require a qualified interpreter or translation service, following organizational policy. A general AI model may miss regional dialects, medical terminology, cultural context, or the difference between a reassuring statement and a dangerous ambiguity.</p>
+<p>If a translated document is allowed under policy, use a professional translation and review process. AI might assist with a glossary or an initial internal draft under approved conditions, but a qualified human translator and clinical reviewer should confirm the final patient-facing text. Do not assume that a translation is adequate because it reads smoothly. Check reading level, cultural fit, medical accuracy, formatting, and the availability of an interpreter for questions.</p>
+<h3 id="step-7-test-version-and-distribute">Step 7: Test, version, and distribute<a class="heading-anchor" href="#step-7-test-version-and-distribute" aria-label="Permalink to Step 7: Test, version, and distribute">#</a></h3>
+<p>Use teach-back with patients or volunteers where appropriate. Ask them to explain in their own words what they will do and when they will call. This tests the material and the teaching interaction, not the patient&#39;s worth. If someone misunderstands, revise the material and the teaching plan.</p>
+<p>Record the version, approval date, clinical owner, and review cycle. Remove outdated materials from circulation. A safe handout can become unsafe when a protocol, contact number, or approved practice changes. If the material is distributed digitally, check links and make sure the correct version is the one patients see.</p>
+<h2 id="teach-back-questions-that-do-not-assume-understanding">Teach-back questions that do not assume understanding<a class="heading-anchor" href="#teach-back-questions-that-do-not-assume-understanding" aria-label="Permalink to Teach-back questions that do not assume understanding">#</a></h2>
+<p>AI can draft teach-back questions, but the clinician should adapt them. Good questions are open and invite the person to explain, demonstrate, or ask, rather than to say &quot;yes.&quot;</p>
+<p>Generic examples:</p>
+<ul><li>&quot;To make sure I explained this clearly, can you tell me in your own words what you will do when you get home?&quot;</li><li>&quot;What would make you call us or seek urgent help?&quot;</li><li>&quot;Show me how you would check [the skill or device, as approved].&quot;</li><li>&quot;What questions do you have about the plan?&quot;</li><li>&quot;Who will you call if you are worried after the clinic closes?&quot;</li></ul>
+<p>Avoid asking &quot;Do you understand?&quot; as the only check. A polite yes may reflect uncertainty, fear, or a desire not to take up time. Teach-back is a conversation, and it should be documented according to policy.</p>
+<h2 id="images-diagrams-and-generated-visuals">Images, diagrams, and generated visuals<a class="heading-anchor" href="#images-diagrams-and-generated-visuals" aria-label="Permalink to Images, diagrams, and generated visuals">#</a></h2>
+<p>AI-generated images can be useful for a rough visualization, but they are not reliable for clinical education. They may show the wrong anatomy, an incorrect device setup, a medication that does not match, unsafe technique, or unrealistic skin tones and body types. Never use a generated image to teach a procedure, medication, wound care, device use, or symptom recognition without expert review. Even then, consider whether a verified photograph, diagram, or hands-on demonstration would be safer.</p>
+<p>Alt text should describe the informational purpose of an image, not just its appearance. Decorative images should be marked as such. Check contrast and avoid conveying meaning only through color.</p>
+<h2 id="patient-facing-chatbots-and-automated-replies">Patient-facing chatbots and automated replies<a class="heading-anchor" href="#patient-facing-chatbots-and-automated-replies" aria-label="Permalink to Patient-facing chatbots and automated replies">#</a></h2>
+<p>A general-purpose chatbot is not a safe substitute for patient teaching or triage. If an organization deploys a patient-facing assistant, it should have a defined scope, clinical governance, escalation paths, privacy protections, accessibility testing, and monitoring for harmful advice. It should not diagnose, prescribe, or handle emergencies on its own. Patients should know what the tool can and cannot do and how to reach a human.</p>
+<p>A nurse should never copy an AI response into a patient portal message and present it as personalized clinical advice without review. Patient messages can contain subtle cues, worsening symptoms, or distress that a model does not detect. The clinician remains responsible for the response.</p>
+<h2 id="a-brief-rewrite-example">A brief rewrite example<a class="heading-anchor" href="#a-brief-rewrite-example" aria-label="Permalink to A brief rewrite example">#</a></h2>
+<p>Suppose a clinician has approved these plain points for a fictional, generic handout: &quot;Store the medicine as directed on the label. Do not change how you take it without talking to your care team. Keep the follow-up appointment listed in your discharge papers.&quot;</p>
+<p>A weak draft might turn those into a long paragraph that adds unsupported advice. A better prompt says: <strong>&quot;Use only these three points. Do not add medication instructions. Write short sentences and a respectful tone. Provide a teach-back question.&quot;</strong> The AI might produce:</p>
+<blockquote><p><strong>Taking your medicine</strong>  Follow the directions on your medicine label. Do not change how you take it unless you talk with your care team first.  <strong>Your follow-up visit</strong>  Go to the follow-up appointment listed in your discharge papers. If you are not sure when it is, call [approved contact].  <strong>A question for you:</strong> Can you tell me in your own words what you should do if you are thinking about changing how you take your medicine?</p></blockquote>
+<p>Even this simple draft needs the contact details and the appropriateness of the wording verified by the clinical owner. The example shows the intended relationship: the AI rephrases approved content, and a human verifies the final product.</p>
+<h2 id="patient-education-review-checklist">Patient education review checklist<a class="heading-anchor" href="#patient-education-review-checklist" aria-label="Permalink to Patient education review checklist">#</a></h2>
+<ul class="checklist"><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The clinical facts came from a qualified clinician or an approved current source.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The output does not add any symptom, medication, dose, restriction, warning, timeline, or promise.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">Every clinical statement traces to the approved key points or has been freshly verified.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">A qualified clinician reviewed the final wording.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The material uses plain language and a logical sequence.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The audience, language, culture, and accessibility needs were considered.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">A qualified interpreter or translation review is used when needed.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">Teach-back questions are included and understandable.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">Contact information and follow-up details are current.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">Images and diagrams are clinically and culturally accurate, or not used.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The final version is recorded, dated, and approved for distribution.</li><li class="task-item"><input type="checkbox" disabled tabindex="-1" aria-hidden="true">The patient still has a way to ask a human questions.</li></ul>
+<p>Clear patient education can reduce confusion and support safer care. The key is to keep the clinical facts under qualified human control while using AI only to improve how those facts are expressed.</p>
+<p>Next: <a href="communication-and-admin.html">communication, handoffs, and administrative work</a>.</p>
+
+      </div>
+
+      <nav class="chapter-pagination" aria-label="Chapter navigation">
+        <a class="pagination-link" href="studying-and-learning.html"><span class="pagination-label">Previous</span><span class="pagination-title">Studying and Professional Learning with AI</span></a>
+        <a class="pagination-link is-next" href="communication-and-admin.html"><span class="pagination-label">Next chapter</span><span class="pagination-title">Communication, Handoffs, and Administrative Work</span></a>
+      </nav>
+
+      <aside class="article-review" aria-label="Review reminder">
+        <strong>Keep the review gate:</strong> if you used AI to draft or organize anything, compare every factual statement with its approved source before it reaches a patient, record, learner, colleague, or the public. When unsure, stop and ask.
+      </aside>
+    </article>
+
+    <aside class="toc-aside" aria-label="Chapter contents">
+      <div class="toc-card">
+        <p class="toc-label">On this page</p>
+        <nav aria-label="Table of contents">
+          <ol class="toc-list"><li class="toc-level-2"><a href="#the-safest-role-for-ai-in-patient-education">The safest role for AI in patient education</a></li><li class="toc-level-2"><a href="#start-with-approved-content-not-a-blank-page">Start with approved content, not a blank page</a></li><li class="toc-level-2"><a href="#a-patient-education-workflow">A patient-education workflow</a></li><li class="toc-level-3"><a href="#step-1-define-the-audience-and-purpose">Step 1: Define the audience and purpose</a></li><li class="toc-level-3"><a href="#step-2-gather-the-clinician-approved-facts">Step 2: Gather the clinician-approved facts</a></li><li class="toc-level-3"><a href="#step-3-ask-for-a-constrained-draft">Step 3: Ask for a constrained draft</a></li><li class="toc-level-3"><a href="#step-4-complete-the-clinical-review">Step 4: Complete the clinical review</a></li><li class="toc-level-3"><a href="#step-5-review-for-health-literacy-and-accessibility">Step 5: Review for health literacy and accessibility</a></li><li class="toc-level-3"><a href="#step-6-use-translation-and-interpretation-correctly">Step 6: Use translation and interpretation correctly</a></li><li class="toc-level-3"><a href="#step-7-test-version-and-distribute">Step 7: Test, version, and distribute</a></li><li class="toc-level-2"><a href="#teach-back-questions-that-do-not-assume-understanding">Teach-back questions that do not assume understanding</a></li><li class="toc-level-2"><a href="#images-diagrams-and-generated-visuals">Images, diagrams, and generated visuals</a></li><li class="toc-level-2"><a href="#patient-facing-chatbots-and-automated-replies">Patient-facing chatbots and automated replies</a></li><li class="toc-level-2"><a href="#a-brief-rewrite-example">A brief rewrite example</a></li><li class="toc-level-2"><a href="#patient-education-review-checklist">Patient education review checklist</a></li></ol>
+        </nav>
+      </div>
+      <div class="aside-safety">
+        <strong>Human review required.</strong>
+        AI can help with structure and wording. It cannot provide clinical judgment, verify its own facts, or assume professional accountability. <a href="what-not-to-use-ai-for.html">Read the stop list</a>.
+      </div>
+    </aside>
+  </div>
+</main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about-wrap">
+        <a class="footer-brand" href="../index.html">
+          <span class="footer-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5l3.15 9.35L28.5 16l-9.35 3.15L16 28.5l-3.15-9.35L3.5 16l9.35-3.15L16 3.5Z" fill="currentColor"/><circle cx="26" cy="6" r="2.4" fill="#e5b36d"/></svg></span>
+          <span>AI for Nurses and Healthcare Workers</span>
+        </a>
+        <p class="footer-about">A practical field guide to using generative AI with privacy, verification, and human accountability. Built to be read offline, with no accounts, analytics, or external assets.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Read</p>
+        <ul class="footer-links">
+          <li><a href="../index.html#contents">All chapters</a></li>
+          <li><a href="../chapters/prompt-library.html">Prompt library</a></li>
+          <li><a href="../chapters/what-not-to-use-ai-for.html">What not to use AI for</a></li>
+          <li><a href="../chapters/checklists-and-glossary.html">Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Use</p>
+        <ul class="footer-links">
+          <li><a href="../search.html">Search the guide</a></li>
+          <li><a href="../print.html">Print edition</a></li>
+          <li><a href="../download/ai-for-nurses-guide.md">Markdown edition</a></li>
+          <li><a href="../chapters/start-here.html">Scope and disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Educational use only. This guide is not medical, nursing, legal, or compliance advice and does not create a clinician-patient relationship. Always follow local policy and current authoritative guidance. Edition October 2026.</p>
+      <p class="footer-note">No tracking · No API keys · Static site</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

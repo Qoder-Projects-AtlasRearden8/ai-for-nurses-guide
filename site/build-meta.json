@@ -1,0 +1,100 @@
+{
+  "title": "AI for Nurses and Healthcare Workers",
+  "edition": "October 2026",
+  "generatedAt": "2026-10-22T14:13:28.163Z",
+  "chapterCount": 13,
+  "totalWords": 27920,
+  "chapters": [
+    {
+      "number": "01",
+      "slug": "start-here",
+      "title": "Start Here: Scope, Safety, and How to Use This Guide",
+      "words": 1589,
+      "readTime": 8
+    },
+    {
+      "number": "02",
+      "slug": "how-generative-ai-works",
+      "title": "How Generative AI Works for Healthcare Workers",
+      "words": 1754,
+      "readTime": 8
+    },
+    {
+      "number": "03",
+      "slug": "privacy-and-hipaa",
+      "title": "Privacy, HIPAA, and Responsible Data Handling",
+      "words": 2299,
+      "readTime": 11
+    },
+    {
+      "number": "04",
+      "slug": "documentation-support",
+      "title": "AI-Assisted Clinical Documentation Support",
+      "words": 2247,
+      "readTime": 11
+    },
+    {
+      "number": "05",
+      "slug": "studying-and-learning",
+      "title": "Studying and Professional Learning with AI",
+      "words": 1907,
+      "readTime": 9
+    },
+    {
+      "number": "06",
+      "slug": "patient-education",
+      "title": "Patient Education Drafts: Clarity Without Guessing",
+      "words": 2207,
+      "readTime": 11
+    },
+    {
+      "number": "07",
+      "slug": "communication-and-admin",
+      "title": "Communication, Handoffs, and Administrative Work",
+      "words": 1665,
+      "readTime": 8
+    },
+    {
+      "number": "08",
+      "slug": "prompting-foundations",
+      "title": "Prompting Foundations for Nurses and Healthcare Workers",
+      "words": 2056,
+      "readTime": 10
+    },
+    {
+      "number": "09",
+      "slug": "prompt-library",
+      "title": "Prompt Library",
+      "words": 2596,
+      "readTime": 12
+    },
+    {
+      "number": "10",
+      "slug": "what-not-to-use-ai-for",
+      "title": "What Not to Use AI For",
+      "words": 2534,
+      "readTime": 12
+    },
+    {
+      "number": "11",
+      "slug": "governance-and-equity",
+      "title": "Governance, Equity, and Professional Accountability",
+      "words": 2099,
+      "readTime": 10
+    },
+    {
+      "number": "12",
+      "slug": "scenario-practice",
+      "title": "Scenario Practice and Red Flags",
+      "words": 2422,
+      "readTime": 12
+    },
+    {
+      "number": "13",
+      "slug": "checklists-and-glossary",
+      "title": "Checklists, Quick Reference, and Glossary",
+      "words": 2545,
+      "readTime": 12
+    }
+  ]
+}

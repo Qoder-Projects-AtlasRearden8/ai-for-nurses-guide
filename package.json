@@ -1,0 +1,17 @@
+{
+  "name": "ai-for-nurses-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A safety-first educational guide to generative AI for nurses and healthcare workers.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs",
+    "test": "npm run build && npm run verify",
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

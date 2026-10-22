@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#073e3a">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>What Not to Use AI For | AI for Nurses and Healthcare Workers</title>
+  <meta name="description" content="A practical stop list covering diagnosis, triage, medication calculations, image interpretation, patient-specific advice, high-impact decisions, and more.">
+  <meta property="og:title" content="What Not to Use AI For | AI for Nurses and Healthcare Workers">
+  <meta property="og:description" content="A practical stop list covering diagnosis, triage, medication calculations, image interpretation, patient-specific advice, high-impact decisions, and more.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="page-chapter">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="AI for Nurses and Healthcare Workers home">
+      <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5l3.15 9.35L28.5 16l-9.35 3.15L16 28.5l-3.15-9.35L3.5 16l9.35-3.15L16 3.5Z" fill="currentColor"/><circle cx="26" cy="6" r="2.4" fill="#e5b36d"/></svg></span>
+      <span>
+        <span class="brand-title">AI for Nurses</span>
+        <span class="brand-kicker">Healthcare field guide</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="../index.html"><span>Guide</span></a><a class="nav-link" href="../chapters/prompt-library.html"><span>Prompt library</span></a><a class="nav-link" href="../chapters/what-not-to-use-ai-for.html" aria-current="page"><span>What not to use</span></a><a class="nav-link" href="../chapters/checklists-and-glossary.html"><span>Checklists</span></a><a class="nav-link" href="../search.html"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.7" cy="8.7" r="5.2" stroke="currentColor" stroke-width="1.7"/><path d="M12.7 12.7l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span></a>
+    </nav>
+  </div>
+</header>
+<div class="notice-bar" role="note">
+  <div class="wrap notice-inner">
+    <span class="notice-dot" aria-hidden="true"></span>
+    <p><strong>Educational use only.</strong> Not medical, legal, or compliance advice. AI output requires human review.</p>
+  </div>
+</div>
+  <main id="main" class="page-shell">
+  <div class="chapter-layout">
+    <article class="chapter" aria-labelledby="chapter-title">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Guide</a></li>
+          <li><a href="../index.html#contents">Chapters</a></li>
+          <li aria-current="page">Chapter 10</li>
+        </ol>
+      </nav>
+
+      <header class="chapter-header">
+        <div class="chapter-kicker">
+          <span class="chapter-badge">Chapter 10</span>
+          <span class="chapter-part">Part 3 · Prompts and boundaries</span>
+        </div>
+        <h1 class="chapter-title" id="chapter-title">What Not to Use AI For</h1>
+        <p class="chapter-summary">A practical stop list covering diagnosis, triage, medication calculations, image interpretation, patient-specific advice, high-impact decisions, and more.</p>
+        <div class="chapter-meta">
+          <span>12 min read</span>
+          <span>Chapter 10 of 13</span>
+        </div>
+      </header>
+
+      <details class="toc-mobile">
+        <summary>On this page</summary>
+        <ol class="toc-list"><li class="toc-level-2"><a href="#a-simple-risk-hierarchy">A simple risk hierarchy</a></li><li class="toc-level-2"><a href="#never-put-phi-into-an-unapproved-general-purpose-tool">Never put PHI into an unapproved general-purpose tool</a></li><li class="toc-level-2"><a href="#do-not-use-general-purpose-ai-for-diagnosis-or-treatment-decisions">Do not use general-purpose AI for diagnosis or treatment decisions</a></li><li class="toc-level-2"><a href="#do-not-use-ai-for-triage-or-emergencies">Do not use AI for triage or emergencies</a></li><li class="toc-level-2"><a href="#do-not-use-ai-for-medication-doses-or-orders">Do not use AI for medication doses or orders</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-interpret-images-tracings-or-device-output">Do not use AI to interpret images, tracings, or device output</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-answer-patient-specific-clinical-questions">Do not use AI to answer patient-specific clinical questions</a></li><li class="toc-level-2"><a href="#do-not-use-ai-as-a-mental-health-crisis-service">Do not use AI as a mental health crisis service</a></li><li class="toc-level-2"><a href="#do-not-fabricate-or-launder-documentation">Do not fabricate or launder documentation</a></li><li class="toc-level-2"><a href="#do-not-use-unapproved-ai-in-incident-legal-or-disciplinary-matters">Do not use unapproved AI in incident, legal, or disciplinary matters</a></li><li class="toc-level-2"><a href="#do-not-let-ai-replace-qualified-medical-interpreters">Do not let AI replace qualified medical interpreters</a></li><li class="toc-level-2"><a href="#do-not-automate-high-impact-decisions-about-people">Do not automate high-impact decisions about people</a></li><li class="toc-level-2"><a href="#do-not-deploy-patient-facing-ai-without-governance">Do not deploy patient-facing AI without governance</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-replace-learning-or-assessment">Do not use AI to replace learning or assessment</a></li><li class="toc-level-2"><a href="#do-not-let-ai-make-autonomous-operational-changes">Do not let AI make autonomous operational changes</a></li><li class="toc-level-2"><a href="#do-not-mistake-eloquence-for-evidence">Do not mistake eloquence for evidence</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-surveil-or-exploit">Do not use AI to surveil or exploit</a></li><li class="toc-level-2"><a href="#when-human-in-the-loop-is-not-enough">When &quot;human in the loop&quot; is not enough</a></li><li class="toc-level-2"><a href="#if-you-see-a-prohibited-or-unsafe-use">If you see a prohibited or unsafe use</a></li><li class="toc-level-2"><a href="#the-stop-list">The stop list</a></li></ol>
+      </details>
+
+      <div class="inline-disclaimer" role="note">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.8 18 17H2L10 2.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 7.2v4.5M10 14.6v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <p><strong>Educational use only.</strong> This chapter is not medical, legal, or compliance advice. Verify clinical facts, follow local policy, and keep a qualified human accountable for any patient-facing output.</p>
+      </div>
+
+      <div class="article-body">
+        <p>The most important AI competency in healthcare may be knowing when to put the tool down. Many harmful uses begin with a reasonable intention: save time, answer a patient quickly, reduce documentation burden, or help a colleague. Intention does not change the consequence of an unsafe recommendation, a privacy breach, or a fabricated note.</p>
+<p>This chapter describes uses that should be off-limits for general-purpose generative AI and uses that require an approved, validated clinical system with appropriate human oversight. It is not an exhaustive legal or regulatory list. When a use is not explicitly prohibited by your organization, apply the risk hierarchy and ask before proceeding.</p>
+<h2 id="a-simple-risk-hierarchy">A simple risk hierarchy<a class="heading-anchor" href="#a-simple-risk-hierarchy" aria-label="Permalink to A simple risk hierarchy">#</a></h2>
+<p>Use these questions to decide whether AI belongs in a workflow:</p>
+<ol><li><strong>What happens if the output is wrong?</strong> A typo in an internal agenda is different from a wrong dose or a missed emergency.</li><li><strong>How sensitive is the data?</strong> Public content, personal study notes, and patient records have different rules.</li><li><strong>Is the task making or informing a clinical decision?</strong> Diagnosis, treatment, triage, and monitoring decisions carry higher risk.</li><li><strong>Is the tool validated for this use and population?</strong> General-purpose AI is not a validated clinical decision support tool just because it performs well on examples.</li><li><strong>Can a human catch the error before harm?</strong> If the workflow requires a human to review faster than humanly possible, it is not a real safeguard.</li><li><strong>Can the action be reversed?</strong> A message sent to a patient or an order placed is harder to undo than a draft.</li><li><strong>Is the use fair and transparent?</strong> Could it disadvantage a group, hide a decision, or undermine trust?</li></ol>
+<p>If you cannot answer these questions, stop and escalate. &quot;The AI suggested it&quot; is not a justification for a clinical or administrative decision.</p>
+<h2 id="never-put-phi-into-an-unapproved-general-purpose-tool">Never put PHI into an unapproved general-purpose tool<a class="heading-anchor" href="#never-put-phi-into-an-unapproved-general-purpose-tool" aria-label="Permalink to Never put PHI into an unapproved general-purpose tool">#</a></h2>
+<p>This is a stop line. Do not enter patient names, record numbers, dates of care, contact details, rare conditions, images, audio, or combinations of details that could identify someone into a consumer chatbot, a personal AI account, or any tool not approved for that data. Do not upload screenshots of a chart, monitor, or whiteboard. Do not use a personal device or account for work.</p>
+<p>Removing the name is not enough. Rare diagnoses, small communities, specific dates, family details, and unusual events can identify a person. Use a synthetic example or the organization&#39;s approved de-identified workflow. If you are uncertain whether data is de-identified, treat it as PHI and ask.</p>
+<p>The safer alternative is not &quot;use a different chatbot.&quot; It is to use the approved system or keep the patient information out of the AI entirely.</p>
+<h2 id="do-not-use-general-purpose-ai-for-diagnosis-or-treatment-decisions">Do not use general-purpose AI for diagnosis or treatment decisions<a class="heading-anchor" href="#do-not-use-general-purpose-ai-for-diagnosis-or-treatment-decisions" aria-label="Permalink to Do not use general-purpose AI for diagnosis or treatment decisions">#</a></h2>
+<p>A general-purpose chatbot should not diagnose a patient, choose a treatment, adjust a therapy, interpret a test in isolation, or decide whether a condition is serious. It lacks the full context, the physical examination, the verified record, the local protocol, and the accountability that clinical decisions require. It can also produce a plausible differential or recommendation that anchors a human on the wrong path.</p>
+<p>This applies even when the prompt contains extensive detail. More context can improve the appearance of expertise while still leaving out crucial information. It applies when a clinician is busy, when the case seems straightforward, and when the AI&#39;s answer matches an initial impression. A model that agrees with you is not confirmation.</p>
+<p>Use AI, if at all, for <strong>non-clinical support</strong> such as organizing the questions the clinician should consider or helping draft a communication after the clinical decision is made and verified. Do not ask it to make the decision.</p>
+<h2 id="do-not-use-ai-for-triage-or-emergencies">Do not use AI for triage or emergencies<a class="heading-anchor" href="#do-not-use-ai-for-triage-or-emergencies" aria-label="Permalink to Do not use AI for triage or emergencies">#</a></h2>
+<p>Triage requires detecting urgency under uncertainty, considering deteriorating trends, and acting within a local system. Chatbots are not an emergency service. They can fail to recognize a red flag, respond too slowly, provide false reassurance, or give instructions that delay care.</p>
+<p>If a patient, family member, colleague, or anyone else describes a possible emergency, follow the organization&#39;s emergency response process and contact the appropriate emergency service. Do not paste the details into an AI system to see what it thinks. Do not tell a person that an AI assessment says it is safe to wait.</p>
+<p>For patient-facing tools, an emergency must have a clear, tested route to human help. A general-purpose chatbot should not be used as a triage nurse, crisis line, or after-hours clinical advisor.</p>
+<h2 id="do-not-use-ai-for-medication-doses-or-orders">Do not use AI for medication doses or orders<a class="heading-anchor" href="#do-not-use-ai-for-medication-doses-or-orders" aria-label="Permalink to Do not use AI for medication doses or orders">#</a></h2>
+<p>Medication calculations and ordering are high-stakes, error-prone tasks. General-purpose AI can make arithmetic mistakes, misplace decimals, mix units, ignore renal or hepatic factors, or invent a formulation. A confident explanation is not a substitute for the organization&#39;s medication-use system, independent double-checks, pharmacist review, and qualified clinical judgment.</p>
+<p>Do not ask an AI to calculate, check, convert, or recommend a dose for a real patient. Do not use it to generate a medication order or an administration instruction. In a learning context, practice problems may be generated, but every answer must be independently verified using the approved method and an educator&#39;s guidance. Study support is not clinical authorization.</p>
+<p>If you notice a possible medication error, follow the organization&#39;s safety and reporting processes immediately. Do not wait for an AI opinion.</p>
+<h2 id="do-not-use-ai-to-interpret-images-tracings-or-device-output">Do not use AI to interpret images, tracings, or device output<a class="heading-anchor" href="#do-not-use-ai-to-interpret-images-tracings-or-device-output" aria-label="Permalink to Do not use AI to interpret images, tracings, or device output">#</a></h2>
+<p>General-purpose multimodal models may describe an image in fluent language, but they are not validated for clinical interpretation. They can miss findings, invent them, ignore technical quality, or apply the wrong context. Do not use them to interpret:</p>
+<ul><li>X-rays, CTs, MRIs, or ultrasound images;</li><li>electrocardiograms or rhythm strips;</li><li>fetal monitoring tracings;</li><li>laboratory results in isolation;</li><li>pathology or dermatology images;</li><li>wound photographs;</li><li>device alarms or waveforms;</li><li>retinal or other screening images.</li></ul>
+<p>Validated clinical AI systems may exist for specific tasks, but they have defined indications, limitations, workflows, and regulatory oversight. Use them only as approved and with the required human review. A general chatbot is not a substitute for a qualified interpretation or for the patient&#39;s full clinical picture.</p>
+<h2 id="do-not-use-ai-to-answer-patient-specific-clinical-questions">Do not use AI to answer patient-specific clinical questions<a class="heading-anchor" href="#do-not-use-ai-to-answer-patient-specific-clinical-questions" aria-label="Permalink to Do not use AI to answer patient-specific clinical questions">#</a></h2>
+<p>A patient may ask whether a symptom is normal, whether to stop a medicine, what dose to take, whether to go to the emergency department, or what a result means. These are clinical questions. A general AI model should not answer them as if it were the patient&#39;s clinician.</p>
+<p>It is not enough to add a disclaimer such as &quot;I am not a doctor.&quot; A disclaimer does not fix a wrong instruction. The response should be routed to the appropriate clinical workflow, with clear information about what the patient should do next and how urgently to seek help according to the approved protocol.</p>
+<p>If a patient brings in AI-generated advice, treat it as a question, not as evidence. Clarify the plan with the treating clinician and help the patient understand the difference between general information and individualized advice.</p>
+<h2 id="do-not-use-ai-as-a-mental-health-crisis-service">Do not use AI as a mental health crisis service<a class="heading-anchor" href="#do-not-use-ai-as-a-mental-health-crisis-service" aria-label="Permalink to Do not use AI as a mental health crisis service">#</a></h2>
+<p>A chatbot is not a crisis counselor or an emergency service. It may respond with empathy or provide a phone number, but it cannot assess risk reliably, ensure safety, or summon help. It may also give harmful advice if prompted poorly.</p>
+<p>Follow your organization&#39;s behavioral health and emergency protocols. Use validated screening and assessment tools as trained, and involve qualified clinicians. If there is an immediate risk of harm, use emergency resources and do not delay to consult an AI.</p>
+<p>AI can support low-risk education, appointment reminders, or administrative navigation in a governed system, but a patient-facing mental health tool needs specific clinical, ethical, privacy, and regulatory oversight.</p>
+<h2 id="do-not-fabricate-or-launder-documentation">Do not fabricate or launder documentation<a class="heading-anchor" href="#do-not-fabricate-or-launder-documentation" aria-label="Permalink to Do not fabricate or launder documentation">#</a></h2>
+<p>AI must not be used to create records of events that did not occur, add findings that were not assessed, backdate entries, impersonate a clinician, or make an incident seem less serious. It must not be used to alter an incident narrative in a way that changes the facts or shifts blame.</p>
+<p>Documentation fraud is not made acceptable by calling it a &quot;draft.&quot; If you did not perform the assessment, observe the event, or verify the information, you cannot attest to it. Follow the approved correction and amendment process if a record is wrong.</p>
+<p>AI may help with the structure and clarity of a de-identified draft, but the accountable clinician remains responsible for every statement. Keep the source of truth separate and available for review.</p>
+<h2 id="do-not-use-unapproved-ai-in-incident-legal-or-disciplinary-matters">Do not use unapproved AI in incident, legal, or disciplinary matters<a class="heading-anchor" href="#do-not-use-unapproved-ai-in-incident-legal-or-disciplinary-matters" aria-label="Permalink to Do not use unapproved AI in incident, legal, or disciplinary matters">#</a></h2>
+<p>Incident reports, complaints, legal claims, regulatory inquiries, employee discipline, and root-cause analyses can contain highly sensitive information and have specific procedural rules. Do not paste them into a general-purpose AI tool. Use the approved systems and involve risk, legal, compliance, HR, or quality teams as appropriate.</p>
+<p>An AI-generated response can sound empathetic while admitting facts, minimizing concerns, or making promises that the organization cannot keep. It can also introduce inaccuracies into a legal record. Speed is not worth that risk.</p>
+<h2 id="do-not-let-ai-replace-qualified-medical-interpreters">Do not let AI replace qualified medical interpreters<a class="heading-anchor" href="#do-not-let-ai-replace-qualified-medical-interpreters" aria-label="Permalink to Do not let AI replace qualified medical interpreters">#</a></h2>
+<p>Machine translation is not a qualified medical interpreter. Do not use a general AI system to conduct a clinical conversation, obtain consent, give safety instructions, or translate a patient&#39;s concerns when interpretation is required. Errors in nuance, dialect, medical terminology, or urgency can cause harm.</p>
+<p>Use qualified in-person, video, or telephone interpretation according to policy. For written translation, use the approved translation process and qualified reviewers. AI may help a qualified professional prepare a glossary or compare wording under an approved workflow, but the final patient-facing text needs appropriate review.</p>
+<h2 id="do-not-automate-high-impact-decisions-about-people">Do not automate high-impact decisions about people<a class="heading-anchor" href="#do-not-automate-high-impact-decisions-about-people" aria-label="Permalink to Do not automate high-impact decisions about people">#</a></h2>
+<p>AI should not independently decide who gets hired, promoted, disciplined, admitted, discharged, scheduled, insured, or prioritized for scarce resources. These decisions affect people&#39;s lives, can encode bias, and often have legal and ethical requirements. Even when AI is used to assist, the criteria, data, appeals process, and human accountability need governance.</p>
+<p>This includes using AI to evaluate employees, rank patients for services, detect &quot;fraud&quot; or &quot;deception,&quot; or infer sensitive traits. A model&#39;s prediction is not a fair or verified basis for a consequential decision. Use validated, governed processes with human review and the ability to contest the outcome.</p>
+<h2 id="do-not-deploy-patient-facing-ai-without-governance">Do not deploy patient-facing AI without governance<a class="heading-anchor" href="#do-not-deploy-patient-facing-ai-without-governance" aria-label="Permalink to Do not deploy patient-facing AI without governance">#</a></h2>
+<p>A patient-facing chatbot or assistant needs:</p>
+<ul><li>a clearly bounded purpose;</li><li>clinical review and validation for its specific tasks;</li><li>tested escalation for emergencies and uncertainty;</li><li>privacy and security controls;</li><li>transparency about what it is and how it uses data;</li><li>accessibility and language support;</li><li>monitoring for harmful or inequitable outputs;</li><li>a route for patient questions and complaints;</li><li>a plan for updates, incidents, and withdrawal.</li></ul>
+<p>A general-purpose model with a friendly interface is not a governed patient service. Without those controls, it should not be used for clinical advice.</p>
+<h2 id="do-not-use-ai-to-replace-learning-or-assessment">Do not use AI to replace learning or assessment<a class="heading-anchor" href="#do-not-use-ai-to-replace-learning-or-assessment" aria-label="Permalink to Do not use AI to replace learning or assessment">#</a></h2>
+<p>Using AI to complete exams, write assignments, or take assessments that are meant to evaluate your own competence is an academic integrity issue and a patient-safety issue. You may eventually be responsible for decisions you cannot make. Follow course and licensing rules. If AI use is allowed, disclose it as required and ensure you can explain and defend the work.</p>
+<p>Similarly, educators should not use AI to assign final grades or assess clinical competence without human review, validation, and an appeal process. Generated questions and feedback require expert review.</p>
+<h2 id="do-not-let-ai-make-autonomous-operational-changes">Do not let AI make autonomous operational changes<a class="heading-anchor" href="#do-not-let-ai-make-autonomous-operational-changes" aria-label="Permalink to Do not let AI make autonomous operational changes">#</a></h2>
+<p>Do not give an AI agent unrestricted permission to send patient messages, alter records, place orders, change schedules, adjust staffing, or make purchases without explicit approvals, scoped permissions, and safety controls. An action taken by an automated system can cause harm before a human sees it. Keep high-consequence actions human-controlled and auditable.</p>
+<p>Even for low-risk actions, use least privilege: the tool should access only what the task needs, for only as long as it needs it.</p>
+<h2 id="do-not-mistake-eloquence-for-evidence">Do not mistake eloquence for evidence<a class="heading-anchor" href="#do-not-mistake-eloquence-for-evidence" aria-label="Permalink to Do not mistake eloquence for evidence">#</a></h2>
+<p>Do not use AI to generate citations and treat them as real, invent statistics, or turn a blog post into a guideline. A fluent explanation with references can still be false. Open the source, confirm it exists, and check that it supports the claim in context. A source can be real but outdated, misrepresented, or inapplicable to the population.</p>
+<p>Do not use AI to &quot;clean up&quot; a citation you have not read. Do not use it to manufacture certainty where the evidence is weak. In healthcare, it is acceptable to say &quot;I don&#39;t know&quot; or &quot;the evidence is limited.&quot; It is not acceptable to present an unsupported claim as fact.</p>
+<h2 id="do-not-use-ai-to-surveil-or-exploit">Do not use AI to surveil or exploit<a class="heading-anchor" href="#do-not-use-ai-to-surveil-or-exploit" aria-label="Permalink to Do not use AI to surveil or exploit">#</a></h2>
+<p>AI can analyze communications, locations, images, and behavior in ways that feel intrusive or discriminatory. Do not use it to monitor patients or staff beyond approved safety and security purposes, to infer sensitive traits, to generate deceptive content, to harass, or to manipulate decisions. Privacy and dignity apply even when data is technically accessible.</p>
+<p>Patient stories, photos, and messages deserve particular care. Do not put them into an AI tool for a public post, even as a &quot;composite,&quot; without the required permissions and review.</p>
+<h2 id="when-human-in-the-loop-is-not-enough">When &quot;human in the loop&quot; is not enough<a class="heading-anchor" href="#when-human-in-the-loop-is-not-enough" aria-label="Permalink to When &quot;human in the loop&quot; is not enough">#</a></h2>
+<p>Many AI deployments claim to have a human in the loop. That safeguard only works if:</p>
+<ul><li>the human has the expertise to assess the output;</li><li>the human has enough time and information to review it;</li><li>the human is empowered to reject or change it;</li><li>there is a clear record of the review;</li><li>the workflow measures errors rather than assuming review happens;</li><li>the human is not penalized for slowing down an unsafe process.</li></ul>
+<p>A nurse clicking &quot;approve&quot; on an AI recommendation after a two-second glance is not meaningful oversight. A human signature without the ability to verify the content is a liability, not a control.</p>
+<h2 id="if-you-see-a-prohibited-or-unsafe-use">If you see a prohibited or unsafe use<a class="heading-anchor" href="#if-you-see-a-prohibited-or-unsafe-use" aria-label="Permalink to If you see a prohibited or unsafe use">#</a></h2>
+<p>If a colleague or vendor proposes a use that seems outside safe practice:</p>
+<ol><li>Ask what problem it solves and what happens if it fails.</li><li>Ask whether the tool and data are approved for the use.</li><li>Escalate to the appropriate clinical, privacy, compliance, or informatics leader.</li><li>Do not test the questionable use with real patient data.</li><li>Document the concern through the appropriate internal channel.</li></ol>
+<p>If you already used AI in a prohibited way, report it promptly through the right channel. Concealment makes the consequences worse. A just culture should make reporting the safe choice.</p>
+<h2 id="the-stop-list">The stop list<a class="heading-anchor" href="#the-stop-list" aria-label="Permalink to The stop list">#</a></h2>
+<p>Stop and do not use general-purpose AI when the task involves:</p>
+<ul><li>entering PHI into an unapproved tool;</li><li>diagnosing, treating, or triaging a patient;</li><li>calculating or authorizing a medication dose or order;</li><li>interpreting a clinical image, tracing, or device output;</li><li>giving patient-specific clinical advice;</li><li>handling a mental health or safety emergency;</li><li>creating or altering a record or incident narrative deceptively;</li><li>using an unapproved tool for legal, disciplinary, or complaint content;</li><li>replacing a qualified interpreter;</li><li>making high-impact decisions about people;</li><li>conducting an action that could harm someone before a human reviews it;</li><li>generating evidence or citations that will not be verified.</li></ul>
+<p>The safest AI use is often smaller than the tool&#39;s marketing suggests. That is not a failure of imagination. It is a recognition of what patients, professional standards, and accountable care require.</p>
+<p>Next: <a href="governance-and-equity.html">governance, equity, and professional accountability</a>.</p>
+
+      </div>
+
+      <nav class="chapter-pagination" aria-label="Chapter navigation">
+        <a class="pagination-link" href="prompt-library.html"><span class="pagination-label">Previous</span><span class="pagination-title">Prompt Library</span></a>
+        <a class="pagination-link is-next" href="governance-and-equity.html"><span class="pagination-label">Next chapter</span><span class="pagination-title">Governance, Equity, and Professional Accountability</span></a>
+      </nav>
+
+      <aside class="article-review" aria-label="Review reminder">
+        <strong>Keep the review gate:</strong> if you used AI to draft or organize anything, compare every factual statement with its approved source before it reaches a patient, record, learner, colleague, or the public. When unsure, stop and ask.
+      </aside>
+    </article>
+
+    <aside class="toc-aside" aria-label="Chapter contents">
+      <div class="toc-card">
+        <p class="toc-label">On this page</p>
+        <nav aria-label="Table of contents">
+          <ol class="toc-list"><li class="toc-level-2"><a href="#a-simple-risk-hierarchy">A simple risk hierarchy</a></li><li class="toc-level-2"><a href="#never-put-phi-into-an-unapproved-general-purpose-tool">Never put PHI into an unapproved general-purpose tool</a></li><li class="toc-level-2"><a href="#do-not-use-general-purpose-ai-for-diagnosis-or-treatment-decisions">Do not use general-purpose AI for diagnosis or treatment decisions</a></li><li class="toc-level-2"><a href="#do-not-use-ai-for-triage-or-emergencies">Do not use AI for triage or emergencies</a></li><li class="toc-level-2"><a href="#do-not-use-ai-for-medication-doses-or-orders">Do not use AI for medication doses or orders</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-interpret-images-tracings-or-device-output">Do not use AI to interpret images, tracings, or device output</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-answer-patient-specific-clinical-questions">Do not use AI to answer patient-specific clinical questions</a></li><li class="toc-level-2"><a href="#do-not-use-ai-as-a-mental-health-crisis-service">Do not use AI as a mental health crisis service</a></li><li class="toc-level-2"><a href="#do-not-fabricate-or-launder-documentation">Do not fabricate or launder documentation</a></li><li class="toc-level-2"><a href="#do-not-use-unapproved-ai-in-incident-legal-or-disciplinary-matters">Do not use unapproved AI in incident, legal, or disciplinary matters</a></li><li class="toc-level-2"><a href="#do-not-let-ai-replace-qualified-medical-interpreters">Do not let AI replace qualified medical interpreters</a></li><li class="toc-level-2"><a href="#do-not-automate-high-impact-decisions-about-people">Do not automate high-impact decisions about people</a></li><li class="toc-level-2"><a href="#do-not-deploy-patient-facing-ai-without-governance">Do not deploy patient-facing AI without governance</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-replace-learning-or-assessment">Do not use AI to replace learning or assessment</a></li><li class="toc-level-2"><a href="#do-not-let-ai-make-autonomous-operational-changes">Do not let AI make autonomous operational changes</a></li><li class="toc-level-2"><a href="#do-not-mistake-eloquence-for-evidence">Do not mistake eloquence for evidence</a></li><li class="toc-level-2"><a href="#do-not-use-ai-to-surveil-or-exploit">Do not use AI to surveil or exploit</a></li><li class="toc-level-2"><a href="#when-human-in-the-loop-is-not-enough">When &quot;human in the loop&quot; is not enough</a></li><li class="toc-level-2"><a href="#if-you-see-a-prohibited-or-unsafe-use">If you see a prohibited or unsafe use</a></li><li class="toc-level-2"><a href="#the-stop-list">The stop list</a></li></ol>
+        </nav>
+      </div>
+      <div class="aside-safety">
+        <strong>Human review required.</strong>
+        AI can help with structure and wording. It cannot provide clinical judgment, verify its own facts, or assume professional accountability. <a href="what-not-to-use-ai-for.html">Read the stop list</a>.
+      </div>
+    </aside>
+  </div>
+</main>
+  <footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about-wrap">
+        <a class="footer-brand" href="../index.html">
+          <span class="footer-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3.5l3.15 9.35L28.5 16l-9.35 3.15L16 28.5l-3.15-9.35L3.5 16l9.35-3.15L16 3.5Z" fill="currentColor"/><circle cx="26" cy="6" r="2.4" fill="#e5b36d"/></svg></span>
+          <span>AI for Nurses and Healthcare Workers</span>
+        </a>
+        <p class="footer-about">A practical field guide to using generative AI with privacy, verification, and human accountability. Built to be read offline, with no accounts, analytics, or external assets.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Read</p>
+        <ul class="footer-links">
+          <li><a href="../index.html#contents">All chapters</a></li>
+          <li><a href="../chapters/prompt-library.html">Prompt library</a></li>
+          <li><a href="../chapters/what-not-to-use-ai-for.html">What not to use AI for</a></li>
+          <li><a href="../chapters/checklists-and-glossary.html">Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Use</p>
+        <ul class="footer-links">
+          <li><a href="../search.html">Search the guide</a></li>
+          <li><a href="../print.html">Print edition</a></li>
+          <li><a href="../download/ai-for-nurses-guide.md">Markdown edition</a></li>
+          <li><a href="../chapters/start-here.html">Scope and disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Educational use only. This guide is not medical, nursing, legal, or compliance advice and does not create a clinician-patient relationship. Always follow local policy and current authoritative guidance. Edition October 2026.</p>
+      <p class="footer-note">No tracking · No API keys · Static site</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
