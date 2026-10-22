@@ -1608,6 +1608,11 @@ h3:hover > .heading-anchor {
   font-size: 1.02rem;
 }
 
+.search-input:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .search-input::placeholder {
   color: #75817d;
 }

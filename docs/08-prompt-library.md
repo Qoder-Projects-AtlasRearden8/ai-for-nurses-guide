@@ -94,7 +94,7 @@ Accessibility needs:
 **Do not use for:** deciding what the approved facts should be or improving a document whose source has not been verified.
 
 ```text
-Edit the approved patient education text below for plain language. Preserve every clinical fact, instruction, number, qualifier, and warning exactly. Do not add clinical information. If the original meaning is unclear, flag it instead of choosing an interpretation.
+Edit the approved patient education text below for plain language. Preserve the meaning of every clinical fact, instruction, number, qualifier, and warning; do not add, remove, or weaken any of them. Do not add clinical information. If the original meaning is unclear, flag it instead of choosing an interpretation.
 
 Audience: [GENERAL AUDIENCE]
 Goal: [WHAT THE READER SHOULD UNDERSTAND OR DO]

@@ -241,6 +241,10 @@ async function main() {
   check(searchPage.includes('id="search-input"'), "Search page lacks a search input");
   check(searchPage.includes('id="search-results"'), "Search page lacks a results region");
   check(searchPage.includes("Browse all chapters"), "Search page lacks a no-JavaScript browse fallback");
+  check(
+    /id="search-input"[^>]*\bdisabled\b/.test(searchPage),
+    "Search input should start disabled until its index is ready",
+  );
 
   let searchIndex;
   try {
@@ -272,9 +276,36 @@ async function main() {
   const download = await readIfExists(path.join(SITE_DIR, "download", "ai-for-nurses-guide.md"));
   check(download.startsWith(`# ${guide.title}`), "Markdown download has the wrong title");
   check(download.includes("not medical"), "Markdown download lacks the disclaimer");
+  check(
+    !/\]\([^)]*\.md(?:#[^)]*)?\)/.test(download),
+    "Markdown download still contains cross-file .md links",
+  );
   for (const chapter of chapters) {
     check(download.includes(chapter.title), `Markdown download is missing "${chapter.title}"`);
+    check(
+      download.includes(`<a id="${chapter.slug}"></a>`),
+      `Markdown download lacks an anchor for ${chapter.slug}`,
+    );
+    check(
+      download.includes(`](#${chapter.slug})`),
+      `Markdown download lacks an internal link to ${chapter.slug}`,
+    );
   }
+
+  const notFound = await readIfExists(path.join(SITE_DIR, "404.html"));
+  check(
+    notFound.includes('href="/assets/styles.css"'),
+    "404 page does not load its styles from a root-relative path",
+  );
+  check(
+    notFound.includes('href="/index.html"'),
+    "404 page does not link home from a root-relative path",
+  );
+
+  const references = renderedBySlug.get("checklists-and-glossary") || "";
+  const externalLinks = [...references.matchAll(/href="(https?:\/\/[^"]+)"/g)].map((match) => match[1]);
+  check(externalLinks.length >= 8, "Further reading section lacks enough authoritative external links");
+  check(externalLinks.every((href) => href.startsWith("https://")), "External reference links must use HTTPS");
 
   const pageFiles = [
     path.join(SITE_DIR, "index.html"),
@@ -296,6 +327,7 @@ async function main() {
     check(/<meta name="viewport"/.test(html), `Missing viewport meta: ${path.relative(ROOT, pageFile)}`);
     check(/<meta name="description"/.test(html), `Missing meta description: ${path.relative(ROOT, pageFile)}`);
     check(/<a class="skip-link" href="#main">/.test(html), `Missing skip link: ${path.relative(ROOT, pageFile)}`);
+    check(/not medical/i.test(html), `Missing not-medical-advice notice: ${path.relative(ROOT, pageFile)}`);
     check(!/<[^>]+\sstyle\s*=/.test(html), `Inline style attribute found: ${path.relative(ROOT, pageFile)}`);
     check(!/<[^>]+\son[a-z]+\s*=/i.test(html), `Inline event handler found: ${path.relative(ROOT, pageFile)}`);
     check(!/<script\b(?![^>]*\bsrc=)[^>]*>/i.test(html), `Inline script found: ${path.relative(ROOT, pageFile)}`);
@@ -315,7 +347,13 @@ async function main() {
     const html = await readIfExists(pageFile);
     const hrefs = [...html.matchAll(/\shref="([^"]+)"/g)].map((match) => decodeEntities(match[1]));
     for (const href of hrefs) {
-      if (!href || href.startsWith("http://") || href.startsWith("https://") || href.startsWith("mailto:")) {
+      if (
+        !href ||
+        href.startsWith("http://") ||
+        href.startsWith("https://") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("//")
+      ) {
         continue;
       }
       if (href.startsWith("data:") || href.startsWith("javascript:")) {
@@ -323,20 +361,32 @@ async function main() {
         continue;
       }
 
-      let resolved;
-      try {
-        resolved = new URL(href, pathToFileURL(pageFile));
-      } catch {
-        failures.push(`Malformed href in ${path.relative(ROOT, pageFile)}: ${href}`);
-        continue;
+      let targetPath;
+      let fragment = "";
+
+      if (href.startsWith("/")) {
+        const hashIndex = href.indexOf("#");
+        const pathPart = (hashIndex >= 0 ? href.slice(0, hashIndex) : href).split("?")[0];
+        fragment = hashIndex >= 0 ? href.slice(hashIndex + 1) : "";
+        targetPath = path.resolve(SITE_DIR, `.${decodeURIComponent(pathPart)}`);
+      } else {
+        let resolved;
+        try {
+          resolved = new URL(href, pathToFileURL(pageFile));
+        } catch {
+          failures.push(`Malformed href in ${path.relative(ROOT, pageFile)}: ${href}`);
+          continue;
+        }
+
+        if (resolved.protocol !== "file:") {
+          failures.push(`Unexpected href protocol in ${path.relative(ROOT, pageFile)}: ${href}`);
+          continue;
+        }
+
+        targetPath = path.resolve(fileURLToPath(resolved));
+        fragment = resolved.hash ? decodeURIComponent(resolved.hash.slice(1)) : "";
       }
 
-      if (resolved.protocol !== "file:") {
-        failures.push(`Unexpected href protocol in ${path.relative(ROOT, pageFile)}: ${href}`);
-        continue;
-      }
-
-      const targetPath = path.resolve(fileURLToPath(resolved));
       const relativeTarget = path.relative(SITE_DIR, targetPath);
       if (relativeTarget.startsWith("..") || path.isAbsolute(relativeTarget)) {
         failures.push(`href escapes site directory in ${path.relative(ROOT, pageFile)}: ${href}`);
@@ -349,7 +399,7 @@ async function main() {
       }
 
       checkedLinks += 1;
-      if (resolved.hash) {
+      if (fragment) {
         let targetIds = idsByFile.get(targetPath);
         if (!targetIds && targetPath.endsWith(".html")) {
           const targetHtml = await readIfExists(targetPath);
@@ -357,7 +407,6 @@ async function main() {
           idsByFile.set(targetPath, targetIds);
         }
         if (targetIds) {
-          const fragment = decodeURIComponent(resolved.hash.slice(1));
           check(targetIds.has(fragment), `Broken fragment in ${path.relative(ROOT, pageFile)}: ${href}`);
         }
       }

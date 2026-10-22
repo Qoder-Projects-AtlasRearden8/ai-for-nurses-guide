@@ -1,9 +1,9 @@
 {
   "title": "AI for Nurses and Healthcare Workers",
   "edition": "October 2026",
-  "generatedAt": "2026-10-22T14:13:28.163Z",
+  "generatedAt": "2026-10-22T14:19:00.775Z",
   "chapterCount": 13,
-  "totalWords": 27920,
+  "totalWords": 27931,
   "chapters": [
     {
       "number": "01",
@@ -65,7 +65,7 @@
       "number": "09",
       "slug": "prompt-library",
       "title": "Prompt Library",
-      "words": 2596,
+      "words": 2607,
       "readTime": 12
     },
     {

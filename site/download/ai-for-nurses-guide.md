@@ -6,25 +6,27 @@ Edition: October 2026
 
 > Educational use only. This guide is not medical, nursing, legal, or compliance advice and does not create a clinician-patient relationship. AI output requires human verification. Follow local policy and current authoritative guidance. In an emergency, contact local emergency services.
 
-This single-file Markdown edition is for offline reading and local adaptation. Cross-chapter links retain the original `docs/` filenames and may not open from this single file.
+This single-file Markdown edition is for offline reading and local adaptation. Chapter links jump within this file; use a Markdown viewer that supports internal links and inline HTML anchors.
 
 ## Contents
 
-01. Start Here: Scope, Safety, and How to Use This Guide
-02. How Generative AI Works for Healthcare Workers
-03. Privacy, HIPAA, and Responsible Data Handling
-04. AI-Assisted Clinical Documentation Support
-05. Studying and Professional Learning with AI
-06. Patient Education Drafts: Clarity Without Guessing
-07. Communication, Handoffs, and Administrative Work
-08. Prompting Foundations for Nurses and Healthcare Workers
-09. Prompt Library
-10. What Not to Use AI For
-11. Governance, Equity, and Professional Accountability
-12. Scenario Practice and Red Flags
-13. Checklists, Quick Reference, and Glossary
+01. [Start Here: Scope, Safety, and How to Use This Guide](#start-here)
+02. [How Generative AI Works for Healthcare Workers](#how-generative-ai-works)
+03. [Privacy, HIPAA, and Responsible Data Handling](#privacy-and-hipaa)
+04. [AI-Assisted Clinical Documentation Support](#documentation-support)
+05. [Studying and Professional Learning with AI](#studying-and-learning)
+06. [Patient Education Drafts: Clarity Without Guessing](#patient-education)
+07. [Communication, Handoffs, and Administrative Work](#communication-and-admin)
+08. [Prompting Foundations for Nurses and Healthcare Workers](#prompting-foundations)
+09. [Prompt Library](#prompt-library)
+10. [What Not to Use AI For](#what-not-to-use-ai-for)
+11. [Governance, Equity, and Professional Accountability](#governance-and-equity)
+12. [Scenario Practice and Red Flags](#scenario-practice)
+13. [Checklists, Quick Reference, and Glossary](#checklists-and-glossary)
 
 ---
+
+<a id="start-here"></a>
 
 # Start Here: Scope, Safety, and How to Use This Guide
 
@@ -115,10 +117,12 @@ A practical progression looks like this:
 
 AI is likely to be part of your working life in some form. The goal is not to become a prompt engineer. The goal is to become a discriminating user: clear about the task, honest about the limits, careful with data, and unwilling to trade a patient's safety for a faster paragraph.
 
-Next: [how generative AI works](01-how-generative-ai-works.md).
+Next: [how generative AI works](#how-generative-ai-works).
 
 
 ---
+
+<a id="how-generative-ai-works"></a>
 
 # How Generative AI Works for Healthcare Workers
 
@@ -228,10 +232,12 @@ Use this four-part model when you encounter an AI tool:
 
 When any of those four boxes is unclear, stop and ask. That habit will protect more patients than any clever prompt.
 
-Next: [privacy, HIPAA, and responsible data handling](02-privacy-hipaa.md).
+Next: [privacy, HIPAA, and responsible data handling](#privacy-and-hipaa).
 
 
 ---
+
+<a id="privacy-and-hipaa"></a>
 
 # Privacy, HIPAA, and Responsible Data Handling
 
@@ -406,10 +412,12 @@ Before pressing send, ask these five questions:
 
 The safest AI workflow is often the least dramatic one: generic prompts, approved tools, no patient identifiers, clear human review, and a short path to a privacy expert when something looks unusual.
 
-Next: [AI-assisted clinical documentation support](03-documentation.md).
+Next: [AI-assisted clinical documentation support](#documentation-support).
 
 
 ---
+
+<a id="documentation-support"></a>
 
 # AI-Assisted Clinical Documentation Support
 
@@ -621,10 +629,12 @@ Before you finalize an AI-assisted draft:
 
 Documentation support can be valuable when it helps a clinician communicate verified facts more clearly. It becomes dangerous when it substitutes plausible language for observation. Keep the source of truth human, current, and visible.
 
-Next: [studying and professional learning with AI](04-studying.md).
+Next: [studying and professional learning with AI](#studying-and-learning).
 
 
 ---
+
+<a id="studying-and-learning"></a>
 
 # Studying and Professional Learning with AI
 
@@ -802,10 +812,12 @@ Be cautious if:
 
 The discomfort of trying to remember something is often where learning happens. AI should not remove all friction; it should direct the effort toward useful feedback.
 
-Next: [drafting patient education content](05-patient-education.md).
+Next: [drafting patient education content](#patient-education).
 
 
 ---
+
+<a id="patient-education"></a>
 
 # Patient Education Drafts: Clarity Without Guessing
 
@@ -1011,10 +1023,12 @@ Even this simple draft needs the contact details and the appropriateness of the 
 
 Clear patient education can reduce confusion and support safer care. The key is to keep the clinical facts under qualified human control while using AI only to improve how those facts are expressed.
 
-Next: [communication, handoffs, and administrative work](06-communication-admin.md).
+Next: [communication, handoffs, and administrative work](#communication-and-admin).
 
 
 ---
+
+<a id="communication-and-admin"></a>
 
 # Communication, Handoffs, and Administrative Work
 
@@ -1160,10 +1174,12 @@ Do not use AI to smooth over a concern that needs a direct human conversation. A
 
 AI can make communication faster, but speed is not the objective. The objective is a message that is understood, acted on correctly, and owned by a person who can be held accountable.
 
-Next: [prompting foundations](07-prompting-foundations.md).
+Next: [prompting foundations](#prompting-foundations).
 
 
 ---
+
+<a id="prompting-foundations"></a>
 
 # Prompting Foundations for Nurses and Healthcare Workers
 
@@ -1381,10 +1397,12 @@ Avoid:
 
 A prompt is a tool for communicating with a system that generates plausible language. The clinician's judgment, the approved source, and the human review are what turn that language into safe work.
 
-Next: [the prompt library](08-prompt-library.md).
+Next: [the prompt library](#prompt-library).
 
 
 ---
+
+<a id="prompt-library"></a>
 
 # Prompt Library
 
@@ -1482,7 +1500,7 @@ Accessibility needs:
 **Do not use for:** deciding what the approved facts should be or improving a document whose source has not been verified.
 
 ```text
-Edit the approved patient education text below for plain language. Preserve every clinical fact, instruction, number, qualifier, and warning exactly. Do not add clinical information. If the original meaning is unclear, flag it instead of choosing an interpretation.
+Edit the approved patient education text below for plain language. Preserve the meaning of every clinical fact, instruction, number, qualifier, and warning; do not add, remove, or weaken any of them. Do not add clinical information. If the original meaning is unclear, flag it instead of choosing an interpretation.
 
 Audience: [GENERAL AUDIENCE]
 Goal: [WHAT THE READER SHOULD UNDERSTAND OR DO]
@@ -1723,10 +1741,12 @@ Before using a generated output:
 - [ ] The required disclosure, approval, and retention steps are complete.
 - [ ] There is a way to report an error or privacy concern.
 
-Next: [what not to use AI for](09-what-not-to-use-ai-for.md).
+Next: [what not to use AI for](#what-not-to-use-ai-for).
 
 
 ---
+
+<a id="what-not-to-use-ai-for"></a>
 
 # What Not to Use AI For
 
@@ -1921,10 +1941,12 @@ Stop and do not use general-purpose AI when the task involves:
 
 The safest AI use is often smaller than the tool's marketing suggests. That is not a failure of imagination. It is a recognition of what patients, professional standards, and accountable care require.
 
-Next: [governance, equity, and professional accountability](10-governance-equity.md).
+Next: [governance, equity, and professional accountability](#governance-and-equity).
 
 
 ---
+
+<a id="governance-and-equity"></a>
 
 # Governance, Equity, and Professional Accountability
 
@@ -2133,10 +2155,12 @@ At the same time, organizations must not place impossible expectations on indivi
 
 Good governance does not eliminate all risk. It makes risk visible, assigns ownership, and creates a way to learn before harm spreads. That is a more realistic goal than "safe AI" as a marketing claim.
 
-Next: [scenario practice](11-scenarios.md).
+Next: [scenario practice](#scenario-practice).
 
 
 ---
+
+<a id="scenario-practice"></a>
 
 # Scenario Practice and Red Flags
 
@@ -2291,10 +2315,12 @@ Use these scenarios in a 45- to 60-minute session:
 
 The point of scenario practice is to build a reflex: **pause, identify the source of truth, protect the data, and ask who is accountable.** That reflex is more durable than memorizing a feature list.
 
-Next: [checklists, quick reference, and glossary](12-checklists-glossary.md).
+Next: [checklists, quick reference, and glossary](#checklists-and-glossary).
 
 
 ---
+
+<a id="checklists-and-glossary"></a>
 
 # Checklists, Quick Reference, and Glossary
 

@@ -752,7 +752,7 @@ function renderSearch(chapterData) {
       <label class="search-label" id="search-heading" for="search-input">Search words or topics</label>
       <div class="search-input-wrap">
         ${icons.search}
-        <input class="search-input" id="search-input" type="search" placeholder="Try “documentation”, “HIPAA”, “prompt”..." autocomplete="off" spellcheck="false" aria-controls="search-results" aria-describedby="search-hint search-status">
+        <input class="search-input" id="search-input" type="search" placeholder="Loading search index..." autocomplete="off" spellcheck="false" aria-controls="search-results" aria-describedby="search-hint search-status" disabled>
       </div>
       <p class="search-hint visually-hidden" id="search-hint">Results update as you type and link to chapters that match every word.</p>
       <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
@@ -851,21 +851,25 @@ function renderPrint(chapterData) {
 }
 
 function render404() {
+  // A 404 can be served at any URL depth, so relative asset paths would break
+  // when the missing path contains directory segments. Root-relative paths
+  // keep the page intact when the site is hosted at the domain root.
+  const prefix = "/";
   const content = `<main id="main" class="simple-main">
   <div class="wrap">
     <p class="eyebrow">Page not found</p>
     <h1>That page is not in the guide.</h1>
     <p>The link may be out of date. Start with the guide contents, search for a topic, or return to the beginning.</p>
     <div class="hero-actions simple-actions">
-      <a class="btn btn-primary" href="index.html">Go to the guide ${icons.arrow}</a>
-      <a class="btn btn-secondary" href="search.html">Search</a>
+      <a class="btn btn-primary" href="${prefix}index.html">Go to the guide ${icons.arrow}</a>
+      <a class="btn btn-secondary" href="${prefix}search.html">Search</a>
     </div>
   </div>
 </main>`;
   return documentShell({
     fullTitle: `Page not found | ${guide.title}`,
     description: "The requested page was not found.",
-    prefix: "",
+    prefix,
     activeNav: "",
     bodyClass: "page-simple",
     content,
@@ -891,8 +895,22 @@ function buildSearchIndex(chapterData) {
 }
 
 function buildCombinedMarkdown(chapterData) {
-  const toc = chapterData.map((chapter) => `${chapter.number}. ${chapter.title}`).join("\n");
-  const body = chapterData.map((chapter) => requireChapterSource(chapter)).join("\n\n---\n\n");
+  const byFile = new Map(chapterData.map((chapter) => [chapter.file, chapter]));
+  const toc = chapterData
+    .map((chapter) => `${chapter.number}. [${chapter.title}](#${chapter.slug})`)
+    .join("\n");
+  const body = chapterData
+    .map((chapter) => {
+      const source = requireChapterSource(chapter).replace(
+        /\]\((?:\.\/)?([^/)#]+\.md)(?:#[^)]*)?\)/g,
+        (match, fileName) => {
+          const target = byFile.get(fileName);
+          return target ? `](#${target.slug})` : match;
+        },
+      );
+      return `<a id="${chapter.slug}"></a>\n\n${source}`;
+    })
+    .join("\n\n---\n\n");
   return `# ${guide.title}
 
 ${guide.subtitle}
@@ -901,7 +919,7 @@ Edition: ${guide.edition}
 
 > Educational use only. This guide is not medical, nursing, legal, or compliance advice and does not create a clinician-patient relationship. AI output requires human verification. Follow local policy and current authoritative guidance. In an emergency, contact local emergency services.
 
-This single-file Markdown edition is for offline reading and local adaptation. Cross-chapter links retain the original \`docs/\` filenames and may not open from this single file.
+This single-file Markdown edition is for offline reading and local adaptation. Chapter links jump within this file; use a Markdown viewer that supports internal links and inline HTML anchors.
 
 ## Contents
 
